@@ -19,7 +19,7 @@ const EditUser = ({firstName, lastname, emailId, mobile, address1, address2, sta
   const updateuser = async (e) => {
     e.preventDefault()
     try {
-      const res = await fetch(`http://localhost:3000/api/list/${id}`, {
+      const res = await fetch(`https://nextjs-form-qr9ww5oki-jhoncarter7.vercel.app/api/list/${id}`, {
         method: "PUT",
         headers: {
           "Content-type": "application/json",

@@ -15,7 +15,7 @@ const route = useRouter()
   const handlesubmit = async (e) =>{
     e.preventDefault()
     try {
-      const res = await fetch("http://localhost:3000/api/list", {
+      const res = await fetch("https://nextjs-form-qr9ww5oki-jhoncarter7.vercel.app/api/list", {
         method: "POST",
         headers:{
           'Content-type': 'application/json'

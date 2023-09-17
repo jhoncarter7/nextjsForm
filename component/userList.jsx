@@ -6,7 +6,7 @@ import RemoveBtn from "./RemoveBtn";
 
 const getUserDetails = async () => {
   try {
-    const res = await fetch('http://localhost:3000/api/list',{
+    const res = await fetch('https://nextjs-form-qr9ww5oki-jhoncarter7.vercel.app/api/list',{
       cache: 'no-store'
     })
     if(!res.ok){

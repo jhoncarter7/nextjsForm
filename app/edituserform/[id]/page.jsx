@@ -4,7 +4,7 @@ import React from "react";
 
 const getSingleUser = async (id) => {
   try {
-    const res = await fetch(`http://localhost:3000/api/list/${id}`, {
+    const res = await fetch(`https://nextjs-form-qr9ww5oki-jhoncarter7.vercel.app/api/list/${id}`, {
       cache: "no-store",
     });
     if (!res.ok) {
