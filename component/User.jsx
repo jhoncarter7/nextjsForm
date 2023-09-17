@@ -1,34 +1,32 @@
 import React from 'react'
 
-export const User = () => {
+export const User = ({ud}) => {
   return (
-    <div class="flex flex-wrap py-2">
+    <div class="flex flex-wrap py-2 gap-5 justify-between">
     <div class="flex-1 p-4 m-2 bg-gray-200">
-      Item 1
+    Name:  {ud.FirstName} {ud.lastName}
+    </div>
+    
+    <div class="flex-1 p-4 m-2 bg-gray-200">
+    EmailId: {ud.EmailId}
     </div>
     <div class="flex-1 p-4 m-2 bg-gray-200">
-      Item 2
+    Mobile: {ud.Mobile}
     </div>
     <div class="flex-1 p-4 m-2 bg-gray-200">
-      Item 3
+    Address1: {ud.Address1}
     </div>
     <div class="flex-1 p-4 m-2 bg-gray-200">
-      Item 4
+    Address2: {ud.Address1}
     </div>
     <div class="flex-1 p-4 m-2 bg-gray-200">
-      Item 5
+    State: {ud.State}
     </div>
     <div class="flex-1 p-4 m-2 bg-gray-200">
-      Item 6
+    Country: {ud.Country}
     </div>
     <div class="flex-1 p-4 m-2 bg-gray-200">
-      Item 7
-    </div>
-    <div class="flex-1 p-4 m-2 bg-gray-200">
-      Item 8
-    </div>
-    <div class="flex-1 p-4 m-2 bg-gray-200">
-      Item 9
+    ZipCode: {ud.ZipCode}
     </div>
 
   </div>

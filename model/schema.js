@@ -5,7 +5,7 @@ const schemaUser = new Schema(
         FirstName: String,
         lastName: String,
         EmailId: String,
-        Mobile: String,
+        Mobile: Number,
         Address1: String,
         Address2: String,
         State: String,
