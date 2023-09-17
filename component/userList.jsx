@@ -1,8 +1,8 @@
 import Link from "next/link";
 import React from "react";
 import EditNoteIcon from "@mui/icons-material/EditNote";
-import DeleteIcon from "@mui/icons-material/Delete";
 import { User } from "./User";
+import RemoveBtn from "./RemoveBtn";
 
 const getUserDetails = async () => {
   try {
@@ -30,10 +30,8 @@ const UserList = async () => {
 <div className="flex justify-between">
   <h2>{ud.FirstName}</h2>
   <div>
-    <Link className="px-4" href={"/"}>
-      <DeleteIcon size={24} />
-    </Link>
-    <Link href={"/edituserform"}>
+      <RemoveBtn id={ud._id} />
+    <Link href={`/edituserform/${ud._id}`}>
       <EditNoteIcon size={24} />
     </Link>
   </div>
