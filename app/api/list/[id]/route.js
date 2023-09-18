@@ -1,4 +1,4 @@
-import mongoDBConnection from "@/lib/database"
+import {mongoDBConnection} from "@/lib/database"
 import UserDetails from "@/model/schema"
 import { NextResponse } from "next/server"
 

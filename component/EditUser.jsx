@@ -12,14 +12,14 @@ const EditUser = ({firstName, lastname, emailId, mobile, address1, address2, sta
   const [State, setState] = useState(state);
   const [Country, setCountry] = useState(country);
   const [ZipCode, setZipCode] = useState(zipCode);
-
+ const [getuser, setGetuser] = useState(null)
   const router = useRouter();
 
   // *************************************
   const updateuser = async (e) => {
     e.preventDefault()
     try {
-      const res = await fetch(`https://nextjs-form-qr9ww5oki-jhoncarter7.vercel.app/api/list/${id}`, {
+      const response = await fetch(`/api/list/${id}`, {
         method: "PUT",
         headers: {
           "Content-type": "application/json",
@@ -36,12 +36,19 @@ const EditUser = ({firstName, lastname, emailId, mobile, address1, address2, sta
           ZipCode,
         }),
       });
-      if (!res.ok) {
-        throw new Error("failed to update single user");
-      }
-      router.refresh()
+
+     const userdata = response.json()
+    setGetuser(userdata)
+
+      if (response.ok) {
+        
+        router.refresh()
       router.push("/");
-    } catch (error) {}
+      }
+      
+    } catch (error) {
+      console.log(error)
+    }
   };
   return (
     <form

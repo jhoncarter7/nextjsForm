@@ -6,9 +6,10 @@ const RemoveBtn = ({id}) => {
     const router = useRouter()
     const deleteuser = async () =>{
         try {
-            const res = await fetch(`https://nextjs-form-qr9ww5oki-jhoncarter7.vercel.app/api/list?id=${id}`, {
+            const res = await fetch(`/api/list?id=${id}`, {
                 method: "DELETE"
             })
+            
             if(res.ok){
         router.refresh()
             }
